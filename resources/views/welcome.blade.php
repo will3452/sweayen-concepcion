@@ -13,7 +13,7 @@
 				<div class="inner">
 					<a href="/" class="logo">OWIS</a>
 					<nav id="nav">
-						@foreach (\App\models\Page::whereNotNull('view_on_nav')->get() as $page)
+						@foreach (\App\Models\Page::whereNotNull('view_on_nav')->get() as $page)
 							<a href="{{ route('pages.show', $page) }}">{{ $page->title }}</a>
 						@endforeach
 					</nav>
